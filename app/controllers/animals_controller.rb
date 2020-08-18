@@ -2,7 +2,7 @@ class AnimalsController < ApplicationController
     def index 
         animals = Animal.all 
         random = animals.sample
-        render json: animals, except: [:created_at, :updated_at]
+        render json: random, include: [:comments]
     end 
 
     def show 
