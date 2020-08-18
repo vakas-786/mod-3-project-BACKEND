@@ -8,4 +8,22 @@ class CommentsController < ApplicationController
         comment = Comment.find_by(id: params[:id])
         render json: comment, only: [:id, :animal_id, :user_id, :text]
     end 
+
+    def create 
+        
+       comment = Comment.create(comment_params) 
+
+        render json: comment
+    end
+    
+    def delete 
+        comment = Movie.find(params[:id])
+
+        movie.destroy 
+        render json: {}
+    end 
+
+    def comment_params
+        params.require(:comment).permit(:animal_id, :user_id, :text)
+      end
 end

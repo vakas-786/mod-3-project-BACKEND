@@ -7,6 +7,6 @@ class AnimalsController < ApplicationController
 
     def show 
         animal = Animal.find_by(id: params[:id])
-        render json: animal, except: [:created_at, :updated_at]
+        render json: animal, include: [:comments]
     end 
 end 
