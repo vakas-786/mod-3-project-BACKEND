@@ -16,10 +16,10 @@ class CommentsController < ApplicationController
         render json: comment
     end
     
-    def delete 
-        comment = Movie.find(params[:id])
+    def destroy 
+        comment = Comment.find(params[:id])
 
-        movie.destroy 
+        comment.destroy 
         render json: {}
     end 
 
