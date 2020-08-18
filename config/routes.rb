@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   # , only: [:index, :show]
   resources :animals
   # , only: [:index, :show] 
+  resources :users
 end
