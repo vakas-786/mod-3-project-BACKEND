@@ -9,4 +9,9 @@ class AnimalsController < ApplicationController
         animal = Animal.find_by(id: params[:id])
         render json: animal, include: [:comments]
     end 
+
+    def first 
+        animal = Animal.all.first
+        render json: animal, include: [:comments] 
+    end 
 end 

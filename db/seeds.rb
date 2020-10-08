@@ -23,10 +23,6 @@ get_animals(ANIMAL_URL)
 
 User.create(name: "User 1")
 
-# 100.times do 
-# Comment.create({animal_id: Animal.all.sample.id, user_id: User.all.sample.id, text: "hello"})
-# end 
-
 
 
 
